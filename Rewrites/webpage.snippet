@@ -10,18 +10,9 @@
 # PornHub (https://cn.pornhub.com/) //*.pornhub.com
 ^https:\/\/(?:cn|www)\.pornhub\.com\/_xa\/ads(_batch)?\? url reject
 
-# ======= 普通网页 ====== #
-## 百度 //boxer.baidu.com, m.baidu.com, www.baidu.com, zhidao.baidu.com
-## 百度防跳转
-^https:\/\/boxer\.baidu\.com\/scheme\?scheme url script-response-body https://raw.githubusercontent.com/Lonense/lazy_rules/refs/heads/main/Scripts/baiduNoRedirect.js
-## 百度首页
-^https:\/\/(?:www|m)\.baidu\.com(\/|\/\?(tn=&)?from=\d+\w)?$ url script-response-body https://raw.githubusercontent.com/Lonense/lazy_rules/refs/heads/main/Scripts/baidu-index.js
-## 百度知道
-^https:\/\/zhidao\.baidu\.com\/(?:question|index|\?fr|\?word) url script-response-body https://raw.githubusercontent.com/Lonense/lazy_rules/refs/heads/main/Scripts/baidu-zhidao.js
-
 # ======= ooxx ====== #
 # JavDB //javdb.com
 ^https:\/\/javdb\.com\/(?!over18\?) url script-response-body https://raw.githubusercontent.com/Lonense/lazy_rules/refs/heads/main/Scripts/javdb.js
 
 # MITM
-hostname = boxer.baidu.com, m.baidu.com, www.baidu.com, zhidao.baidu.com, *.google.cn, asserts.avple.tv, javdb.com, *.pornhub.com
+hostname = *.google.cn, asserts.avple.tv, javdb.com, *.pornhub.com
