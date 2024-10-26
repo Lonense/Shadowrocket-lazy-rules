@@ -1,7 +1,7 @@
 #!name = MyBlockAds
 #!desc = 自用去广告插件, 以下app请使用单独插件: 高德地图, 哔哩哔哩, 网易云音乐, 微博, YouTube, 知乎。
 #!author = RuCu6[https://github.com/RuCu6]
-#!icon = https://raw.githubusercontent.com/RuCu6/Loon/main/Icons/app/myblockads.png
+#!icon = https://raw.githubusercontent.com/Lonense/lazy_rules/refs/heads/main/Icons/app/myblockads.png
 #!date = 2024-10-15 10:05
 
 [Rule]
@@ -349,45 +349,45 @@ URL-REGEX, ^http:\/\/\w{32}\.jddebug\.com\/diagnose\?, REJECT
 
 [Script]
 # 12306 //ad.12306.cn, mobile.12306.cn
-http-request ^https:\/\/ad\.12306\.cn\/ad\/ser\/getAdList$ url script-response-body https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/12306.js
-^https:\/\/mobile\.12306\.cn\/otsmobile\/app\/mgs\/mgw\.htm$ url script-response-body https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/header.js
+http-request ^https:\/\/ad\.12306\.cn\/ad\/ser\/getAdList$ url script-response-body https://raw.githubusercontent.com/Lonense/lazy_rules/refs/heads/main/Scripts/12306.js
+^https:\/\/mobile\.12306\.cn\/otsmobile\/app\/mgs\/mgw\.htm$ url script-response-body https://raw.githubusercontent.com/Lonense/lazy_rules/refs/heads/main/Scripts/header.js
 
 # 阿里云盘 //*api.alipan.com, member.alipan.com
-^https:\/\/(biz)?api\.alipan\.com\/apps\/v\d\/users?\/home\/(?:news|widgets) url script-response-body https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/adrive.js
-^https:\/\/member\.alipan\.com\/v1\/users\/onboard_list url script-response-body https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/adrive.js
+^https:\/\/(biz)?api\.alipan\.com\/apps\/v\d\/users?\/home\/(?:news|widgets) url script-response-body https://raw.githubusercontent.com/Lonense/lazy_rules/refs/heads/main/Scripts/adrive.js
+^https:\/\/member\.alipan\.com\/v1\/users\/onboard_list url script-response-body https://raw.githubusercontent.com/Lonense/lazy_rules/refs/heads/main/Scripts/adrive.js
 
 # 阿里巴巴 //acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com
-^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(?:cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get) url script-response-body https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/myBlockAds.js
-^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json url script-response-body https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/myBlockAds.js
+^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(?:cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get) url script-response-body https://raw.githubusercontent.com/Lonense/lazy_rules/refs/heads/main/Scripts/myBlockAds.js
+^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json url script-response-body https://raw.githubusercontent.com/Lonense/lazy_rules/refs/heads/main/Scripts/myBlockAds.js
 
 # 草榴社区 //2023.redircdn.com
-^https:\/\/2023\.redircdn\.com\/web\/mob_post\.js\? url script-response-body https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/myBlockAds.js
+^https:\/\/2023\.redircdn\.com\/web\/mob_post\.js\? url script-response-body https://raw.githubusercontent.com/Lonense/lazy_rules/refs/heads/main/Scripts/myBlockAds.js
 
 # 昌原云充 五代十路 //www.washpayer.com
-^https:\/\/www\.washpayer\.com\/user\/message\/equipmentPara\? url script-response-body https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/changyuan.js
+^https:\/\/www\.washpayer\.com\/user\/message\/equipmentPara\? url script-response-body https://raw.githubusercontent.com/Lonense/lazy_rules/refs/heads/main/Scripts/changyuan.js
 
 # 京东 //api.m.jd.com
-^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(?:deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome) url script-response-body https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/jingdong.js
+^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(?:deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome) url script-response-body https://raw.githubusercontent.com/Lonense/lazy_rules/refs/heads/main/Scripts/jingdong.js
 
 # 酷安 //api.coolapk.com
-^https:\/\/api\.coolapk\.com\/v6\/(?:feed\/detail|feed\/replyList|page\/dataList|main\/dataList|main\/indexV8|main\/init) url script-response-body https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/coolapk.js
+^https:\/\/api\.coolapk\.com\/v6\/(?:feed\/detail|feed\/replyList|page\/dataList|main\/dataList|main\/indexV8|main\/init) url script-response-body https://raw.githubusercontent.com/Lonense/lazy_rules/refs/heads/main/Scripts/coolapk.js
 
 # 酷狗音乐 //adserviceretry.kglink.cn, gateway.kugou.com
-^https:\/\/gateway\.kugou\.com\/(?:adp\/ad\/v1\/mine_top_banner|ads\.gateway\/v2\/home_card) url script-response-body https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/kugou.js
-^https?:\/\/adserviceretry\.kglink\.cn\/v\d\/mobile\w+ url script-response-body https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/kugou.js
+^https:\/\/gateway\.kugou\.com\/(?:adp\/ad\/v1\/mine_top_banner|ads\.gateway\/v2\/home_card) url script-response-body https://raw.githubusercontent.com/Lonense/lazy_rules/refs/heads/main/Scripts/kugou.js
+^https?:\/\/adserviceretry\.kglink\.cn\/v\d\/mobile\w+ url script-response-body https://raw.githubusercontent.com/Lonense/lazy_rules/refs/heads/main/Scripts/kugou.js
 
 # 微信封禁页面 //weixin110.qq.com, security.wechat.com
-^https\:\/\/(?:weixin110\.qq|security\.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\? url script-response-body https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/wechat/unlockUrls.js
+^https\:\/\/(?:weixin110\.qq|security\.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\? url script-response-body https://raw.githubusercontent.com/Lonense/lazy_rules/refs/heads/main/Scripts/wechat/unlockUrls.js
 
 # 小米商城 //api.m.mi.com, shop-api.retail.mi.com
-^https:\/\/api\.m\.mi\.com\/v1\/app\/start url script-response-body https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/myBlockAds.js
+^https:\/\/api\.m\.mi\.com\/v1\/app\/start url script-response-body https://raw.githubusercontent.com/Lonense/lazy_rules/refs/heads/main/Scripts/myBlockAds.js
 
 # 中国农业银行 //mobilepaas.abchina.com.cn
-http-request ^https:\/\/mobilepaas\.abchina\.com\.cn:441\/mgw\.htm$ url script-response-body https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/header.js
+http-request ^https:\/\/mobilepaas\.abchina\.com\.cn:441\/mgw\.htm$ url script-response-body https://raw.githubusercontent.com/Lonense/lazy_rules/refs/heads/main/Scripts/header.js
 
 # 中国移动云盘 //ad.mcloud.139.com, jzts.cmpassport.com
-^https:\/\/ad\.mcloud\.139\.com\/advertapi\/adv-filter\/ url script-response-body https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/cloud139.js
-^https:\/\/jzts\.cmpassport\.com\/personalized\/getPushContent url script-response-body https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/cloud139.js
+^https:\/\/ad\.mcloud\.139\.com\/advertapi\/adv-filter\/ url script-response-body https://raw.githubusercontent.com/Lonense/lazy_rules/refs/heads/main/Scripts/cloud139.js
+^https:\/\/jzts\.cmpassport\.com\/personalized\/getPushContent url script-response-body https://raw.githubusercontent.com/Lonense/lazy_rules/refs/heads/main/Scripts/cloud139.js
 
 [MITM]
 hostname = ad.12306.cn, mobile.12306.cn, list-app-m.i4.cn, *api.alipan.com, member.alipan.com, acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, pan.baidu.com, 2023.redircdn.com, www.washpayer.com, api.douban.com, img3.doubanio.com, qnmob3.doubanio.com, image.mybank.icbc.com.cn, hfapp-service.qweather.net, acs-m.freshippo.com, api.m.jd.com, gab.122.gov.cn, api.coolapk.com, adserviceretry.kglink.cn, gateway.kugou.com, p0.pipi.cn, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, osg-service.sgcc.com.cn, mp.weixin.qq.com, weixin110.qq.com, security.wechat.com, api.m.mi.com, home.mi.com, shop-api.retail.mi.com, wallet.95516.com, mobilepaas.abchina.com.cn, ad.mcloud.139.com, jzts.cmpassport.com
