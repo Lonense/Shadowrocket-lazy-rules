@@ -1,4 +1,4 @@
-[Rewrite]
+# Rewrite
 # 惊喜弹窗
 ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/surprisebox\/(?:get_style|open|submit_action) reject-dict
 ^https:\/\/www\.xiaohongshu\.com\/api\/marketing\/box\/trigger\? reject-dict
@@ -34,5 +34,5 @@ https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v5\/recommend\/user\/follow_recomme
 # 移除图片和实况照片水印
 ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/note\/(?:imagefeed|live_photo\/save) url script-response-body https://raw.githubusercontent.com/Lonense/lazy_rules/refs/heads/main/Scripts/xiaohongshu.js
 
-[MITM]
+# MITM
 hostname = edith.xiaohongshu.com, www.xiaohongshu.com

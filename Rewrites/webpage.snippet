@@ -1,4 +1,4 @@
-[Rewrite]
+# Rewrite
 # 桌面端请使用 https://google.com/ncr
 # 谷歌服务重定向 //*.google.cn
 ^https?:\/\/www\.google\.cn 302 https://www.google.com
@@ -23,5 +23,5 @@ http-request ^https:\/\/boxer\.baidu\.com\/scheme\?scheme url script-response-bo
 # JavDB //javdb.com
 ^https:\/\/javdb\.com\/(?!over18\?) url script-response-body https://raw.githubusercontent.com/Lonense/lazy_rules/refs/heads/main/Scripts/webpage/javdb.js
 
-[MITM]
+# MITM
 hostname = boxer.baidu.com, m.baidu.com, www.baidu.com, zhidao.baidu.com, *.google.cn, asserts.avple.tv, javdb.com, *.pornhub.com

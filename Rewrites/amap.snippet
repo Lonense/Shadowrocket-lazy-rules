@@ -1,4 +1,4 @@
-[Rewrite]
+# Rewrite
 # 此条可以屏蔽首次进入的天气动效图层 但是会导致足迹不显示地图数据
 #^https:\/\/mps\.amap\.com\/ws\/mps\/scene\? reject-dict
 
@@ -48,5 +48,5 @@
 ^https:\/\/m5-zb\.amap\.com\/ws\/boss\/(?:car\/order\/content_info|order_web\/friendly_information) url script-response-body https://raw.githubusercontent.com/Lonense/lazy_rules/refs/heads/main/Scripts/amap.js
 ^https:\/\/m5-zb\.amap\.com\/ws\/promotion-web\/resource(\/home)?\? url script-response-body https://raw.githubusercontent.com/Lonense/lazy_rules/refs/heads/main/Scripts/amap.js
 
-[MITM]
+# MITM
 hostname = m5.amap.com, m5-zb.amap.com, oss.amap.com, sns.amap.com
