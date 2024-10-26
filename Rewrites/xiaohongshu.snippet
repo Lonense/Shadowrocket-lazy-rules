@@ -1,12 +1,3 @@
-#!name = 小红书
-#!desc = 集美们都在这里当女菩萨。
-#!author = RuCu6[https://github.com/RuCu6], fmz200[https://github.com/fmz200]
-#!icon = https://raw.githubusercontent.com/Lonense/lazy_rules/refs/heads/main/Icons/app/xiaohongshu.png
-#!date = 2024-10-15 10:45
-
-[Rule]
-AND, ((PROTOCOL, UDP), (DOMAIN-SUFFIX, xiaohongshu.com)), REJECT
-
 [Rewrite]
 # 惊喜弹窗
 ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/surprisebox\/(?:get_style|open|submit_action) reject-dict
@@ -22,7 +13,6 @@ AND, ((PROTOCOL, UDP), (DOMAIN-SUFFIX, xiaohongshu.com)), REJECT
 ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v4\/search\/hint response-body-json-replace data.hint_words []
 ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v4\/search\/trending\? response-body-json-replace data.queries [] data.hint_word {}
 
-[Script]
 # 详情页小部件、关注页感兴趣的人
 ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/(?:note\/widgets|user\/followings\/followfeed) url script-response-body https://raw.githubusercontent.com/Lonense/lazy_rules/refs/heads/main/Scripts/xiaohongshu.js
 
